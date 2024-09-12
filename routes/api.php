@@ -9,5 +9,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('users', UserController::class)->except([
-    'create', 'show', 'edit'
+    'create', 'edit'
 ]);
