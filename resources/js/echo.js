@@ -13,7 +13,7 @@ window.Echo = new Echo({
     enabledTransports: ['ws', 'wss'],
 });
 
-window.Echo.channel(posts)
+window.Echo.channel('posts') 
     .listen('PostCreated', (e) => {
-        alert('A new post was published' + e.post.message);
+        alert('A new post was published: ' + e.post.message);
     });
