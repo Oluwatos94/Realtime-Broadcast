@@ -15,6 +15,7 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <div id="app">
@@ -78,4 +79,12 @@
         </main>
     </div>
 </body>
+
+@if (config('filament.broadcasting.echo'))
+    <script data-navigate-once>
+        window.Echo = new window.EchoFactory(@js(config('filament.broadcasting.echo')))
+
+        window.dispatchEvent(new CustomEvent('EchoLoaded'))
+    </script>
+@endif
 </html>
