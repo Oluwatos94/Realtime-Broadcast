@@ -2,6 +2,7 @@
 
 namespace App\Events;
 
+use App\Models\Post;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
@@ -13,6 +14,7 @@ use Illuminate\Queue\SerializesModels;
 class PostUpdated implements ShouldBroadcast
 {
     public $post;
+    
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
     /**
