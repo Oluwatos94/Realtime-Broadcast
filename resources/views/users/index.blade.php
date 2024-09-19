@@ -22,10 +22,11 @@
 <script>
     window.axios.get('/api/users')
         .then((response) => {
+            console.log(response);
             
             const usersElement = document.getElementById('users');
 
-            let users = response.data;
+            let users = response.data.data;
 
             users.forEach((user, index) => {
                 let element = document.createElement('li');
