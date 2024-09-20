@@ -15,3 +15,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/posts/createPost', [CreatePost::class])->name('createPost');
 
 Route::view('/users', 'users.index')->name('users.index');
+
+Route::view('/game', 'game.show')->name('game.show');
